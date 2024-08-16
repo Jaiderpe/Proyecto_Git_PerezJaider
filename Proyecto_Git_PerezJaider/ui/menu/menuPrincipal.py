@@ -13,7 +13,8 @@ def menu():
         opcion = input("Seleccione una opción: ")
         
         if opcion == "1":
-            inventario.generar_informe_sucursales()
+            sucursal = input("Ingrese el nombre de la sucursal: ")
+            inventario.generar_informe_sucursales(sucursal)
         elif opcion == "2":
             None
         elif opcion == "3":
