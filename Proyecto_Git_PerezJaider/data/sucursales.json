@@ -1,0 +1,12 @@
+{
+    "sucursales": [
+        [
+            {
+                "Nombre de Sucursal": "Panaderia",
+                "Direccion": "call2",
+                "Telefono o Contacto: ": "3134277875",
+                "ID del gerente": "12345678"
+            }
+        ]
+    ]
+}

@@ -1,10 +1,9 @@
-from modules import inventario
-from modules import ventas
-from modules import aggData
+import modules.inventario as inventario
+import modules.ventas as ventas
+import modules.aggData as aggD
+
 def menu():
-    sistema = inventario()
-    sistemav=ventas()
-    sistemad=aggData()
+    
     while True:
         print("\nSistema de Gestión de Ventas y Compras")
         print("1. Ver inventario")
@@ -14,11 +13,11 @@ def menu():
         opcion = input("Seleccione una opción: ")
         
         if opcion == "1":
-            inventario(sistema)
+            inventario.gestionInventario()
         elif opcion == "2":
-            ventas(sistemav)
+            None
         elif opcion == "3":
-            aggData(sistema)
+            aggD.añadirSucursal()
         else:
             print("Opción no válida. Por favor, seleccione nuevamente.")
 if __name__ == "__main__":

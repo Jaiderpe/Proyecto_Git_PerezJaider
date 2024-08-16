@@ -5,9 +5,9 @@ import ui.menu.menuPrincipal as uiMenu
 
 def main():
     fg.borrar_pantalla()
-    cf.iniciarRegistroSucurrsales()
+    cf.iniciarRegistroDataSucursales()
     while True:
-        opcion = uiMenu()
+        opcion = uiMenu.menu()
         if opcion == 4:
             break
 

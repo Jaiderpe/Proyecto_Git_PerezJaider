@@ -1,9 +1,9 @@
 import json
 import modules.movesJson as mj
 
-DATABASE_SUCURSALES = 'data/sucursales.json'
-DATABASE_INVENTARIO = 'data/compras.json'
+DATABASE_SUCURSAL = 'Proyecto_Git_PerezJaider\data\sucursales.json'
 
-def iniciarRegistroSucurrsales():
-    mj.checkfile(DATABASE_SUCURSALES, {"sucursales": []})
-    mj.checkfile(DATABASE_INVENTARIO, {"inventario": []})
+
+def iniciarRegistroDataSucursales():
+    mj.checkfile(DATABASE_SUCURSAL, {"sucursales": {}})
+    

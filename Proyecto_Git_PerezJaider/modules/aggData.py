@@ -6,8 +6,7 @@ def añadirSucursal():
     direccion = input("Ingrese la direccion: ")
     contacto = input("Ingrese el correo o telefono de la sucursal: ")
     id_gerente = input ("Ingrese el ID del gerente: ")
-
-    
+        
     datosSucursal = {
         'Nombre de Sucursal': nombreSucursal,
         'Direccion': direccion,
@@ -21,9 +20,9 @@ def añadirSucursal():
     fg.pausar_pantalla()
     
 
-def aggDataSucursal(namespace, compra):
+def aggDataSucursal(namespace, sucursal):
     try:
-        with open('data/sucursales.json', 'r') as file:
+        with open('Proyecto_Git_PerezJaider\data\sucursales.json', 'r') as file:
             data = json.load(file)
     except FileNotFoundError:
         data = {}
@@ -31,7 +30,7 @@ def aggDataSucursal(namespace, compra):
     if namespace not in data or not isinstance(data[namespace], list):
         data[namespace] = []
 
-    data[namespace].append(compra)
+    data[namespace].append(sucursal)
 
-    with open('data/sucursales.json', 'w') as file:
+    with open('Proyecto_Git_PerezJaider\data\sucursales.json', 'w') as file:
         json.dump(data, file, indent=4)
